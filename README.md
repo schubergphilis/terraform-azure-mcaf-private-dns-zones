@@ -13,7 +13,7 @@ Terraform Module to create all privatelink dns zones
 
 | Name | Version |
 |------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 4.7.0 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | >= 4 |
 
 ## Modules
 
