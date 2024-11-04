@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "this" {
   name     = var.resource_group.name
-  location = var.resource_group.location
+  location = var.location
   tags = merge(
     try(var.tags),
     tomap({

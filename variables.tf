@@ -1,18 +1,16 @@
 variable "resource_group" {
   description = "The name of the resource group in which to create the resources."
   type = object({
-    name     = string
-    location = string
+    name = string
   })
   default = {
-    name     = null
-    location = null
+    name = null
   }
   nullable = false
 }
 
 variable "location" {
-  description = "Location to be used in some Private DNS Zones"
+  description = "Location used fir the resource group and in some Private DNS Zones"
   type        = string
 }
 
