@@ -28,7 +28,6 @@ locals {
         "privatelink.${local.location}.azmk8s.io",
         "privatelink.azurecr.io",
         "privatelink.database.windows.net",
-        # "privatelink.{dnsPrefix}.database.windows.net",
         "privatelink.documents.azure.com",
         "privatelink.mongo.cosmos.azure.com",
         "privatelink.cassandra.cosmos.azure.com",
@@ -81,7 +80,6 @@ locals {
         "privatelink.azurewebsites.net",
         "privatelink.service.signalr.net",
         "privatelink.azurestaticapps.net",
-        # "privatelink.{partitionId}.azurestaticapps.net",
     ])) : dns_zone => {}
   }
 }
