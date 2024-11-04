@@ -17,6 +17,10 @@ provider "azurerm" {
 module "private_dns_zones" {
   source = "../.."
 
+  resource_group = {
+    name = "example-rg"
+  }
+
   location      = "West Europe"
   shortlocation = "weu"
 }
