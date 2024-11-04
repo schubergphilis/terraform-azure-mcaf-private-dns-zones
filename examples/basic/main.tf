@@ -23,7 +23,7 @@ module "private_dns_zones" {
 
   location      = "West Europe"
   shortlocation = "weu"
-  
+
   # some sql database types need a dedicated DNS zone, supply them in a seperate list, i.e.
-  additional_zones = [ "privatelink.a1b2c3d4e5f6.database.windows.net" ]
+  additional_zones = ["privatelink.a1b2c3d4e5f6.database.windows.net"]
 }
