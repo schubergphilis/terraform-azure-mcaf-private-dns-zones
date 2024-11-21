@@ -65,7 +65,6 @@ locals {
         "privatelink.purview.azure.com",
         "privatelink.purviewstudio.azure.com",
         "privatelink.prod.migration.windowsazure.com",
-        "privatelink.azure.com",
         "privatelink.grafana.azure.com",
         "privatelink.vaultcore.azure.net",
         "privatelink.managedhsm.azure.net",
