@@ -14,9 +14,10 @@ resource "azurerm_private_dns_zone" "this" {
   name                = each.key
   resource_group_name = azurerm_resource_group.this.name
   tags = merge(
-    var.tags
-    # tomap({
-    #   "Resource Type" = "Private DNS Zone"
-    # })
+    var.tags,
+    tomap({
+      "Resource Type" = "Private DNS Zone"
+      "Test" = "test"
+    })
   )
 }
