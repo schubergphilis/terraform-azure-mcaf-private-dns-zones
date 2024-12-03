@@ -10,23 +10,23 @@ variable "resource_group" {
 }
 
 variable "location" {
-  description = "Location used fir the resource group and in some Private DNS Zones"
+  description = "Location used for the resource group and in some Private DNS Zones"
   type        = string
 }
 
 variable "shortlocation" {
-  description = "shortcode of the location to be used in some Private DNS Zones"
+  description = "shortcode of the location used in some Private DNS Zones"
   type        = string
 }
 
 variable "tags" {
-  description = "A map of tags to assign to the resource."
+  description = "A map of tags to assign to the resources."
   type        = map(string)
   default     = {}
 }
 
 variable "additional_zones" {
-  description = "Additional Private DNS zones to create"
+  description = "Additional Private DNS Zones to create"
   type        = list(string)
   default     = []
 }
