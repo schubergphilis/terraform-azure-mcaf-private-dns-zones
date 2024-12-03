@@ -16,8 +16,7 @@ resource "azurerm_private_dns_zone" "this" {
   tags = merge(
     var.tags,
     tomap({
-      "Resource Type" = "Private DNS Zone"
-      "Test" = "test"
+      "Resource_Type" = "Private DNS Zone"
     })
   )
 }
