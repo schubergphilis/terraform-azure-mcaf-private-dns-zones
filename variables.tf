@@ -1,12 +1,6 @@
-variable "resource_group" {
+variable "resource_group_name" {
   description = "The name of the resource group in which to create the resources."
-  type = object({
-    name = string
-  })
-  default = {
-    name = null
-  }
-  nullable = false
+  type        = string
 }
 
 variable "location" {
@@ -29,4 +23,10 @@ variable "additional_zones" {
   description = "Additional Private DNS Zones to create"
   type        = list(string)
   default     = []
+}
+
+variable "query_zones" {
+  description = "if set to true will query for created zones instead of creating them, used for creating vnet links"
+  type = bool
+  default = false
 }

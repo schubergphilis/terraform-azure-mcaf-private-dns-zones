@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "this" {
-  name     = var.resource_group.name
+  name     = var.resource_group_name
   location = var.location
   tags = merge(
     var.tags,
@@ -10,7 +10,7 @@ resource "azurerm_resource_group" "this" {
 }
 
 resource "azurerm_private_dns_zone" "this" {
-  for_each            = local.private_dns_zones
+  for_each            = var.query_zones ? {} : local.private_dns_zones
   name                = each.key
   resource_group_name = azurerm_resource_group.this.name
   tags = merge(
@@ -19,4 +19,10 @@ resource "azurerm_private_dns_zone" "this" {
       "Resource_Type" = "Private DNS Zone"
     })
   )
+}
+
+data "azurerm_private_dns_zone" "this" {
+  for_each            = var.query_zones ? local.private_dns_zones : {}
+  name                = each.key
+  resource_group_name = azurerm_resource_group.this.name
 }
