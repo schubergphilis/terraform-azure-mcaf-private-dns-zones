@@ -33,6 +33,6 @@ variable "additional_zones" {
 
 variable "virtual_network_id" {
   description = "The ID of the virtual network to link the Private DNS Zones to"
-  type        = optional(string)
+  type        = string
   default     = null
 }
