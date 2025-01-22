@@ -24,6 +24,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [azurerm_private_dns_zone.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_dns_zone) | resource |
+| [azurerm_private_dns_zone_virtual_network_link.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_dns_zone_virtual_network_link) | resource |
 | [azurerm_resource_group.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group) | resource |
 
 ## Inputs
@@ -35,6 +36,7 @@ No modules.
 | <a name="input_additional_zones"></a> [additional\_zones](#input\_additional\_zones) | Additional Private DNS Zones to create | `list(string)` | `[]` | no |
 | <a name="input_resource_group"></a> [resource\_group](#input\_resource\_group) | The name of the resource group in which to create the resources. | <pre>object({<br>    name = string<br>  })</pre> | <pre>{<br>  "name": null<br>}</pre> | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | A map of tags to assign to the resources. | `map(string)` | `{}` | no |
+| <a name="input_virtual_network_id"></a> [virtual\_network\_id](#input\_virtual\_network\_id) | The ID of the virtual network to link the Private DNS Zones to | `string` | `null` | no |
 
 ## Outputs
 

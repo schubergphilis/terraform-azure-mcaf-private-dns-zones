@@ -30,3 +30,9 @@ variable "additional_zones" {
   type        = list(string)
   default     = []
 }
+
+variable "virtual_network_id" {
+  description = "The ID of the virtual network to link the Private DNS Zones to"
+  type        = string
+  default     = null
+}
