@@ -43,4 +43,5 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_private_dns_zones"></a> [private\_dns\_zones](#output\_private\_dns\_zones) | object with all created Private DNS Zones |
+| <a name="output_resource_group_id"></a> [resource\_group\_id](#output\_resource\_group\_id) | ID of the Resource Group created by the module |
 <!-- END_TF_DOCS -->
