@@ -5,5 +5,5 @@ output "private_dns_zones" {
 
 output "resource_group_id" {
   description = "ID of the Resource Group created by the module"
-  value       = azurerm_resource_group.this[0].id
+  value       = var.query_zones ? null : azurerm_resource_group.this[0].id
 }
