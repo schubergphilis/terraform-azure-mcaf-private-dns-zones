@@ -17,7 +17,7 @@ provider "azurerm" {
 module "private_dns_zones" {
   source = "../.."
 
-  resource_group_name "example-rsg"
+  resource_group_name = "example-rsg"
   location           = "West Europe"
   shortlocation      = "weu"
   virtual_network_id = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example-rg/providers/Microsoft.Network/virtualNetworks/example-vnet"
