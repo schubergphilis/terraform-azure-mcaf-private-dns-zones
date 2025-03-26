@@ -58,7 +58,6 @@ locals {
         "privatelink.azure-automation.net",
         "privatelink.${var.shortlocation}.backup.windowsazure.com",
         "privatelink.siterecovery.windowsazure.com",
-        "privatelink.monitor.azure.com",
         "privatelink.oms.opinsights.azure.com",
         "privatelink.ods.opinsights.azure.com",
         "privatelink.agentsvc.azure-automation.net",
