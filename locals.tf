@@ -42,7 +42,6 @@ locals {
         "privatelink.redisenterprise.cache.azure.net",
         "privatelink.his.arc.azure.com",
         "privatelink.guestconfiguration.azure.com",
-        "privatelink.dp.kubernetesconfiguration.azure.com",
         "privatelink.eventgrid.azure.net",
         "privatelink.ts.eventgrid.azure.net",
         "privatelink.azure-api.net",
