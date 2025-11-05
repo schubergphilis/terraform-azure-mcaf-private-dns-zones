@@ -39,6 +39,7 @@ No modules.
 | <a name="input_query_zones"></a> [query\_zones](#input\_query\_zones) | if set to true will query for created zones instead of creating them, used for creating vnet links | `bool` | `false` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | A map of tags to assign to the resources. | `map(string)` | `{}` | no |
 | <a name="input_virtual_network_id"></a> [virtual\_network\_id](#input\_virtual\_network\_id) | The ID of the virtual network to link the Private DNS Zones to | `string` | `null` | no |
+| <a name="input_zone_resolution_policies"></a> [zone\_resolution\_policies](#input\_zone\_resolution\_policies) | Map of zone names to their resolution policies. Each Zone can have either 'Default' or 'NxDomainRedirect' as a value. If the zone is not specified, 'Default' will be used for all zones | `map(string)` | `{}` | no |
 
 ## Outputs
 
