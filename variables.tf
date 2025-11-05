@@ -36,3 +36,9 @@ variable "query_zones" {
   type        = bool
   default     = false
 }
+
+variable "zone_resolution_policies" {
+  description = "Map of zone names to their resolution policies. Each Zone can have either 'Default' or 'NxDomainRedirect' as a value. If the zone is not specified, 'Default' will be used for all zones"
+  type        = map(string)
+  default     = {}
+}
