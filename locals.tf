@@ -77,6 +77,8 @@ locals {
         "privatelink.azurewebsites.net",
         "privatelink.service.signalr.net",
         "privatelink.azurestaticapps.net",
-    ])) : dns_zone => {}
+    ])) : dns_zone => {
+      resolution_policy = lookup(var.zone_resolution_policies, dns_zone, "Default")
+    }
   }
 }

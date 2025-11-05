@@ -35,6 +35,7 @@ resource "azurerm_private_dns_zone_virtual_network_link" "this" {
   resource_group_name   = azurerm_resource_group.this[0].name
   private_dns_zone_name = azurerm_private_dns_zone.this[each.key].name
   virtual_network_id    = var.virtual_network_id
+  resolution_policy     = each.value.resolution_policy
 
   depends_on = [azurerm_private_dns_zone.this]
 
