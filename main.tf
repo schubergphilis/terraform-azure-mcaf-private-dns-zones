@@ -2,12 +2,7 @@ resource "azurerm_resource_group" "this" {
   count    = var.query_zones ? 0 : 1
   name     = var.resource_group_name
   location = var.location
-  tags = merge(
-    var.tags,
-    tomap({
-      "Resource Type" = "Resource Group"
-    })
-  )
+  tags     = var.tags
 }
 
 data "azurerm_private_dns_zone" "this" {
@@ -21,12 +16,7 @@ resource "azurerm_private_dns_zone" "this" {
   name                = each.key
   resource_group_name = azurerm_resource_group.this[0].name
 
-  tags = merge(
-    var.tags,
-    tomap({
-      "Resource_Type" = "Private DNS Zone"
-    })
-  )
+  tags = var.tags
 }
 
 resource "azurerm_private_dns_zone_virtual_network_link" "this" {
@@ -39,10 +29,5 @@ resource "azurerm_private_dns_zone_virtual_network_link" "this" {
 
   depends_on = [azurerm_private_dns_zone.this]
 
-  tags = merge(
-    var.tags,
-    tomap({
-      "Resource_Type" = "Private DNS Zone Virtual Network Link"
-    })
-  )
+  tags = var.tags
 }
