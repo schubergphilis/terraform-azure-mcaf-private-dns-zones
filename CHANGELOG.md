@@ -4,6 +4,16 @@ All notable changes to this project will automatically be documented in this fil
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v0.5.0 - 2026-02-12
+
+### What's Changed
+
+#### 🚀 Features
+
+* enhancement: Remove Resource Type from tags to make more room for the 15 tag limit on DNS zones (#12) @gillianstravers
+
+**Full Changelog**: https://github.com/schubergphilis/terraform-azure-mcaf-private-dns-zones/compare/v0.4.0...v0.5.0
+
 ## v0.4.0 - 2025-11-05
 
 ### What's Changed
